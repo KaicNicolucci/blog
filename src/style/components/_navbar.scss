@@ -1,5 +1,11 @@
 @import '../abstract/variaveis';
 
+header{
+    display: flex;
+    justify-content: center;
+    background-color: $cor-nav;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -26,6 +32,7 @@ nav{
 
 ul{
     display: flex;
+    list-style: none;
 }
 
 li{
@@ -50,13 +57,10 @@ a{
     display: none;
 }
 
-@media(max-width: 999px) {
-    nav{
-        position: absolute;
-        top: 0;
-        background-color: $cor-nav;
-        width: 100%;
-    }
+@media(max-width: 700px) {
+
+
+
     .mobile-menu{
         display: block;
         padding: 4px;
@@ -64,46 +68,55 @@ a{
         border: none;
         cursor: pointer;
     }
+
+
     .logo p{
         display: none;
     }
+
+
     .lin-1, .lin-2, .lin-3{
         border-top: 2px solid #fff;
         margin-top: 5px;
         width: 30px;
     }
+
+
     ul{
         visibility: hidden;
-        height: 100vh;
-        background-color: blue;
+        background-image: url('../../../images/getty_arena_corinthians.webp');
+        background-size: cover;
         list-style: none;
         position: absolute;
         display: flex;
         flex-direction: column;
         top: 60px;
         right: 0;
-        width: 0;
+        width: 100vw;
+        height: 0;
         transition: 0.7s;
+        overflow-y: hidden;
         li{
-            margin-top: 40px;
+            margin-top: 30px;
+            a{
+                border-radius: none;
+                color: #fff;
+                border-bottom: 1px solid  #fff;
+            }
         }
     }
+
+
     nav.active{
         ul{
             visibility: visible;
-            height: 100vh;
-            background-color: blue;
+            height: 40vh;
             list-style: none;
             position: absolute;
             display: flex;
             flex-direction: column;
             top: 60px;
             right: 0;
-            width: 50%;
-            overflow: hidden;
-            li{
-                margin-top: 40px;
-            }
         }
     }
 }
