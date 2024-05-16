@@ -1,0 +1,29 @@
+@import './variaveis';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: $cor-fundo;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: $cor-nav;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+main .container-father{
+    width: 80vw;
+}
